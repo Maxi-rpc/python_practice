@@ -1,3 +1,8 @@
+'''
+B - Crear una funciån que genere una lista de 23 nümeros aleatorios del 1 al 100 y
+comprobar con la funciån anterior si existen elementos duplicados
+'''
+
 from random import randint
 list_pa = ['pepe','pepa','tete','pepe']
 
@@ -21,12 +26,10 @@ def listaRandom():
 
     return lista_random
 
-listaNueva = listaRandom()
-
 # empieza codigo main
 lista_a_llenar = []
 cosito = True
-
+'''
 while cosito == True:
     palabra = input('Ingresar palabras para la lista: ')
 
@@ -36,3 +39,7 @@ while cosito == True:
         lista_a_llenar.append(palabra)
 
 print(duplicado(lista_a_llenar))
+'''
+listaNueva = listaRandom()
+print(listaNueva)
+print(duplicado(listaNueva))
