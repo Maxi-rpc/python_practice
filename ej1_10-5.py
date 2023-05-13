@@ -35,4 +35,3 @@ for x in range(dias):
         print(f'El dia: {dia} tuvo temperatura menor o igual a {tempMin}')
         print(lista_temp_min[x])
 
-        
