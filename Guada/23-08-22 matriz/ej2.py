@@ -17,27 +17,31 @@ def numRandom():
     num = random.randint(numMin,numMax)
     return num
 
+# lista vacia
+listNum = []
 # busca duplicado
 def checkDuplicado(num):
     isvalid = True
-    for fila in tabla:
-        if num in fila:
-            isvalid = False # si encuentra duplicado pasa a FALSE
-
+    if num in listNum:
+        isvalid = False # si encuentra duplicado pasa a FALSE
     return isvalid
+# completa lista
+for n in range(15):
+    numR = numRandom()
+    while (checkDuplicado(numR) == False): # si es FALSE vuelve a repetir la asignacion
+        numR = numRandom()
+    listNum.append(numR)
+# ordena lista
+listNum.sort()
+#print(listNum) # muestra lista ordenada
 
+# asignamos a la matriz
+cont = 0
 for fila in range(len(tabla)):
     # print(fila) # muestra el num de fila
     for col in range(len(tabla[0])):
         # print(celda) # muestra num de columna
-        numR = numRandom()
-        while (checkDuplicado(numR) == False): # si es FALSE vuelve a repetir la asignacion
-            numR = numRandom()
-        tabla[fila][col] = numR
+        tabla[fila][col] = listNum[cont]
+        cont += 1 # le agrego 1 a la posicion de la listNum
 
 print(tabla)
-
-tablaOrd = sorted(tabla, key=lambda x:x[0])
-
-print()
-print(tablaOrd)
