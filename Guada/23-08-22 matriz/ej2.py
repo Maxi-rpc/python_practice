@@ -1,5 +1,7 @@
 # generar num random para tabla de bingo 15 num random
 import random
+import pprint
+from tabulate import tabulate
 # 5 filas 3 col
 tabla = [
     [0, 0, 0],
@@ -44,4 +46,6 @@ for fila in range(len(tabla)):
         tabla[fila][col] = listNum[cont]
         cont += 1 # le agrego 1 a la posicion de la listNum
 
-print(tabla)
+#print(tabla)
+
+print(tabulate(tabla, headers=['col1', 'col2', 'col3']))

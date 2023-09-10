@@ -1,5 +1,6 @@
 # crear tabla 5x15 
 from pprint import pprint
+from tabulate import tabulate
 mercado = [
     [0, 0, 0, 0, 0], # suc 1
     [0, 0, 0, 0, 0], # suc 2
@@ -81,7 +82,8 @@ def main():
     print('ej5')
     
     cargarArticulos()
-    pprint(mercado)
+    #pprint(mercado)
+    print(tabulate(mercado, headers=['art-1', 'art-2', 'art-3', 'art-4', 'art-5']))
     punto1()
     punto2()
     punto3()
