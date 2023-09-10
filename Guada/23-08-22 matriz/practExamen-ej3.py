@@ -22,7 +22,8 @@ def buscarVoc(palabra):
     for i in range(len(palabra)):
         print(palabraCon)
 
-
+EJ perro, se toma letra repetida?
+SEXTO texos
 
 
 def main():
