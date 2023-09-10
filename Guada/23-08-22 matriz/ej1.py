@@ -19,16 +19,13 @@ equipos = [
 ]
 
 # muestra cada equipo separado por ---
-cont = 0
+
 for fila in range(len(goles)):
-    #print('fila', fila) # muestra el num de fila
+    print('fila', fila) # muestra el num de fila
     for col in range(len(goles[0])):
-        #print('col', col) # muestra num de columna
-        #print(goles[fila][col]) 
-        if(fila == cont and col == cont):
-            #print(cont)
-            goles[fila][col] = 1
-    cont += 1
+        print('col', col) # muestra num de columna
+        print(goles[fila][col]) 
+            
     
 
 
